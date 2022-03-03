@@ -327,7 +327,7 @@ input.au-input.au-input-xl {
 .menu-sidebar .logo {
     background: #fff;
     height: 75px;
-    padding: 0 35px;
+    padding: 0 0px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
