@@ -108,7 +108,7 @@ a, a:hover {
 .page-wrapper {
     overflow: hidden;
     background: #EEEEEE;
-    padding-bottom: 8vh
+    padding-bottom: 27vh;
 }
 
 .page-container {
@@ -245,7 +245,7 @@ input.au-input.au-input-xl {
 .cart-area i {
     font-size: 22px;
     float: left;
-    margin-top: 16px;
+    margin-top: 20px;
     color: #fff;
     margin-left: 15px
 }
@@ -779,12 +779,25 @@ table.table.table-bordered th {
     color: #CC9544
 }
 
+.product-detail-price{
+    color: #CC9544;
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
 .detail-section {
     margin-top: 60px
 }
 
 .detail-img {
-    width: 30%;
+    width: 100%;
+}
+
+.product-details-wrapper{
+    margin-top: 10px;    
+    padding: 10px 0px;
+    border-radius: 5px;
 }
 
 
@@ -836,7 +849,8 @@ a.primary-btn:hover {
 footer {
     z-index: 1;
     position: relative;
-    text-align: center
+    text-align: center;
+    margin-left: 220px;
 }
 
 footer ul{
@@ -844,7 +858,7 @@ footer ul{
 }
 
 footer li a {
-    color: #313131;
+    color: #CC9544;
     font-weight: 500
 }
 
