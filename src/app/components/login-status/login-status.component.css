@@ -3,11 +3,11 @@
     right: 10px;
     min-width: 85px;
     color: #fff;
-    border: 10px solid #205b8d;
+    border: 10px solid #CC9544;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 43px;
-    background: #205b8d
+    background: #CC9544
 }
 
 .login-status-header {
