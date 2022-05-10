@@ -4,14 +4,15 @@ import { Observable } from 'rxjs';
 import { of, map } from 'rxjs';
 import { Country } from '../common/country';
 import { State } from '../common/state';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShopFormService {
 
-  private countriesUrl = "http://localhost:8081/api/countries";
-  private statesUrl = "http://localhost:8081/api/states";
+  private countriesUrl = environment.creativecartApiUrl + "/countries";
+  private statesUrl = environment.creativecartApiUrl + "/states";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -49,7 +50,7 @@ export class ShopFormService {
     );
   }
 
-  getStates(theCountryCode:string): Observable<State[]> {
+  getStates(theCountryCode: string): Observable<State[]> {
     const searchStateUrl = `${this.statesUrl}/search/findByCountryCode?code=${theCountryCode}`;
     return this.httpClient.get<GetResponseStates>(searchStateUrl).pipe(
       map(response => response._embedded.states)
@@ -65,8 +66,8 @@ interface GetResponseCountries {
   }
 }
 
-interface GetResponseStates{
-  _embedded:{
-    states:State[];
+interface GetResponseStates {
+  _embedded: {
+    states: State[];
   }
 }

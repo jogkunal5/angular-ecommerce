@@ -3,14 +3,16 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 import { Product } from '../common/product';
 import { ProductCategory } from '../common/product-category';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  private baseUrl = "http://localhost:8081/api/products";
-  private categoryUrl = "http://localhost:8081/api/product-category";
+  private baseUrl =  environment.creativecartApiUrl + "/products";
+  private categoryUrl =  environment.creativecartApiUrl + "/product-category";
 
   constructor(private httpClient: HttpClient) { }
 
